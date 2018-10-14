@@ -24,7 +24,7 @@ $(window).scroll(function(){
     });
 
     $('.layer-1').css({
-      'transform' : 'translate(0px, '+ wScroll /45 +'%)'
+      'transform' : 'translate(0px, '+ wScroll /65 +'%)'
     });
 
     $('.bird-layer').css({
@@ -55,38 +55,35 @@ $(window).scroll(function(){
     $('.title').removeClass( 'title-show' );
   }
 
-  if(wScroll >= $('.container').offset().top-40){
+  if(wScroll >= $('.cont').offset().top-40){
 
     $('.title').addClass('title-left');
-    // $('.img').addClass('img-animate');
-    $('.img').css({
-      'transform' : 'translateX(0px)'
-    });
 
+
+
+
+
+    $('#object').each(function(){
+
+				$(this).addClass("slideUp");
+
+		});
 
   }else{
 
       $('.title').removeClass( 'title-left' );
       // $('.img').removeClass('img-animate');
-      $('.img').css({
-        'transform' : 'translateX(-200px)'
-      });
+
     }
 
 
-  
+
 
 
   //
   // // Landing Elements
   // if(wScroll > $('.clothes-pics').offset().top - ($(window).height() / 1.2)) {
   //
-  //   $('.clothes-pics figure').each(function(i){
-  //
-  //     setTimeout(function(){
-  //       $('.clothes-pics figure').eq(i).addClass('is-showing');
-  //     }, (700 * (Math.exp(i * 0.14))) - 700);
-  //   });
   //
   // }
   //
